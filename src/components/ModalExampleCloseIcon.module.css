@@ -1,0 +1,81 @@
+ @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+         /* url('../fonts/Vazir.svg#FontName') format('svg'); */
+   font-style: normal;
+    font-weight: normal;
+} 
+ @font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir',Arial, Helvetica, sans-serif;
+} 
+:root {
+    --max-width : 1100px;
+
+    --base-color: #ffcb22;
+    --dark-color : #000000;
+    --second-color : #5e5e5e;
+    --light-color : #dadada;
+    
+    --red-color :red;
+    --silver-color:silver;
+    --white-color:white;
+    --second-silver-color :rgba(192, 192, 192, 0.664);
+    --orange-color:rgb(255, 123, 0);
+    --submit-color: #0BC166;
+}
+.modalPage {
+    direction: rtl;
+    margin: auto;
+    margin-top: 10%;
+    width: 60%;
+    background-color: var(--white-color);
+    padding: 50px 50px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-size: 100%;
+}
+.submitHdr {
+    color: var(--submit-color);
+}
+.submitBtn {
+    background-color: var(--submit-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.submitBtn:hover {
+    font-size: 20px;
+}
+.errorHdr {
+    color: var(--red-color);
+}
+.errorBtn{
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.errorBtn:hover {
+    font-size: 20px;
+}

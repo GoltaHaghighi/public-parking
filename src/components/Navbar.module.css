@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+         /* url('../fonts/Vazir.svg#FontName') format('svg'); */
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir',Arial, Helvetica, sans-serif;
+}
+:root {
+    --max-width : 1100px;
+
+    --base-color: #ffcb22;
+    --dark-color : #000000;
+    --second-color : #5e5e5e;
+    --light-color : #dadada;
+    
+    --red-color :red;
+    --silver-color:silver;
+    --white-color:white;
+}
+
+.header {
+    /* max-width: var(--max-width); */
+    margin: auto;
+    /* padding: 0 2rem; */
+    margin-bottom: 2rem;
+    background-color: var(--base-color);
+    /* color: var(--light-color) ; */
+    justify-content: space-between;
+}
+.header:hover {
+    /* background-color: var(--second-color); */
+}
+.listContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list li {
+    list-style: none;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.list li a {
+    padding: 0.5rem 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+.list li a:hover{
+    color: var(--second-color);
+    font-size: 17px;
+}
+.title a{
+    cursor: pointer;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 40px;
+}
+.title a:hover{
+    color: var(--second-color);  
+    font-size: 50px;
+
+}
+@media (max-width:750px) {
+    .listContainer {
+        grid-template-columns:1fr;
+        grid-gap: 1.2rem;
+    }
+    .list {
+        order: 2;
+        justify-self: center;
+    }
+}

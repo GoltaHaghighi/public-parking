@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+         /* url('../fonts/Vazir.svg#FontName') format('svg'); */
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir',Arial, Helvetica, sans-serif !important;
+}
+:root {
+    --max-width : 1100px;
+
+    --base-color: #ffcb22;
+    --dark-color : #000000;
+    --second-color : #5e5e5e;
+    --light-color : #dadada;
+    
+    --red-color :red;
+    --silver-color:silver;
+    --white-color:white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /* align-items: center; */
+}
+.formContainer {
+    border: solid 1px var(--silver-color);
+    width: 50%;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 10px;
+    height: fit-content;
+    background-color: var(--light-color);
+}
+.formFields {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 70px; */
+    height: 75px;
+    align-items: center;
+}
+.formFields .label {
+    text-align: right;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+.formInput {
+    width: fit-content;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid var(--silver-color);
+    transition: all 0.2s ease-in;
+    /* display: block; */
+}
+.carNumber {
+    display: flex;
+}
+.selectStyle {
+    width: fit-content;
+    height: fit-content;
+}
+.uncompleted {
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 3px solid var(--red-color);
+    transition: all 0.2s ease-in;
+}
+.formInput:focus,
+.uncompleted:focus {
+    outline: none;
+    line-height: 30px;
+    height: 40px;
+    border: 1px solid var(--dark-color);
+}
+
+.formButton button{
+    background-color: var(--base-color);
+    padding: 10px 20px;
+    margin: 30px;
+    color: var(--dark-color);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    width: 90%;
+}
+.formButton button:hover {
+    /* color: var(--dark-color); */
+    font-size: 25px;
+}
+.formButton a{
+    /* color: var(--base-color); */
+    text-decoration: none;
+    transition: all 0.1 ease-in;
+    font-weight: 700;
+}
+.checkBoxContainer {
+    margin-top: 30px;
+    display: flex;
+    font-size: 0.85rem;
+    flex-direction: row !important;
+    align-items: center;
+    height: 20px !important;
+    text-align: center;
+}
+.checkBoxContainer label {
+    padding: 15px;
+}
+.checkBoxContainer label a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+.checkBoxContainer:hover{
+    background-color: var(--silver-color);
+    padding: 20px;
+    border-radius: 30px;
+}
+.errorSpan {
+    /* width: fit-content; */
+    text-align: left;
+    margin-top: 5px;
+    color: var(--red-color);
+    background-color: rgba(255,0,0,0.2);
+    font-size: 0.7rem;
+    line-height: 10px;
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+@media (max-width: 800px) {
+    .formContainer{
+        padding: 20px;
+        margin: 50px 20px;
+        width: 90%;
+    }
+    /* .formInput{
+        width: 0%;
+    } */
+    .uncompleted {
+        width: 90%;
+    }
+    
+
+}
